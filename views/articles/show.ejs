@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/show.css" />
+  <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/education-232/48/Digital-Book-512.png">
+  <title>The Article - <%= article.title %></title>
+</head>
+<body>
+  <div class='container'>
+    <h1 class='title'><%= article.title %></h1>
+    <div class='date'><%= article.createdAt.toLocaleDateString() %></div>
+    <h2 class='description'><%= article.description %></h2>
+  </div>
+  <div class='btn'>
+  <a href='/' class='btn-all-articles'>All Articles</a>
+  <a href='/articles/edit/<%= article.id %>' class='btn-edit'>Edit</a>
+  </div>
+  <div class='main'>
+    <%- article.sanitizedHtml %>
+  </div>
+  
+</body>
+</html>
