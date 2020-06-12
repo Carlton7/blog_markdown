@@ -1,0 +1,183 @@
+/* The navigation bar */
+body {
+  margin: 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: #333;
+ /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.logo {
+  color: #ffffff;
+  margin: 0;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.new-article-btn {
+  padding: 8px 15px;
+  margin: 5px 20px 5px 0px;
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.new-article-btn:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(.9);
+  }
+    100% {
+    transform: scale(1);
+  }
+}
+
+.container {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.btn-delete{
+  display: inline-block;
+  padding: 12px 15px;
+  height: 41px;
+  margin: 15px 20px 20px 20px;
+  border: 2px solid #BFC0C0;
+  color: #BFC0C0;
+  background-color: Transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-size: 15px;
+}
+
+a {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 20px 20px 20px 20px;
+  border: 2px solid #BFC0C0;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
+
+ .card-btn {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: -50px;
+}
+
+ #card-slide {
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.card-btn-edit:hover {
+  background-color: #3c73ff;
+  box-shadow: 8px 8px #99bdff;
+  color: #333;
+  transition: .3s;
+}
+
+.card-btn-read-more:hover {
+  background-color: #3cff87;
+  box-shadow: 8px 8px #99ffdd;
+  color: #333;
+  transition: .3s;
+}
+
+.btn-delete:hover {
+  background-color: #ff3c3c;
+  box-shadow: 8px 8px #ff9999;
+  color: #333;
+  transition: .3s;
+}
+
+form {
+  display: inline-block;
+}
+
+.card {
+  margin: 10px 70px 0px 70px;
+  text-align: left;
+}
+
+.card-img {
+  background-size: cover;
+}
+
+.card-title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card-date {
+  margin-bottom: 20px;
+}
+
+.card-description {
+  margin-top: -10px;
+}
+
+.card .card-caption{
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition:all 0.45s ease-in-out;
+  -moz-transition:all 0.45s ease-in-out;
+  -o-transition:all 0.45s ease-in-out;
+  -ms-transition:all 0.45s ease-in-out;
+  transition:all 0.45s ease-in-out;
+  color: #ffffff;
+}
+
+.card .card-blur{
+  background-color: rgba(0,0,0,0.65);
+  padding: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card .card-title {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.card :hover .card-caption{
+  opacity: 1;
+
+}
+
+@media only screen and (min-width: 1080px) and (max-width: 2000px) {
+  .card {
+    width: 50%;
+    margin: 10px auto;
+  }
+}
+@media only screen and (min-width: 2001px) and (max-width: 6000px) {
+  .card {
+    width: 30%;
+    margin: 10px auto;
+  }
+}
+
